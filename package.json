@@ -1,0 +1,28 @@
+{
+  "name": "webdriverjs-framework-template-es6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint . --fix",
+    "test": "eslint . --fix && mocha --timeout 10000 --compilers js:babel-core/register"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "sourceType": "module",
+      "ecmaVersion": 6
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "6.24.1",
+    "babel-eslint": "7.2.2",
+    "babel-preset-es2015": "6.24.1",
+    "chai": "^3.5.0",
+    "chromedriver": "2.29.0",
+    "eslint": "3.19.0",
+    "mocha": "3.2.0",
+    "selenium-webdriver": "3.3.0"
+  }
+}
