@@ -1,4 +1,4 @@
-describe('mocha test with es6', () => {
+describe.skip('mocha test with es6', () => {
 
   before('before function', () => {
     console.log('before');

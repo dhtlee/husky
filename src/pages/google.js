@@ -1,10 +1,11 @@
 import BasePage from './base';
 import { By } from 'selenium-webdriver';
 
+const url = 'http://www.google.com';
+
 class GooglePage extends BasePage {
   constructor(webdriver) {
     super(webdriver, url);
-    this.url = 'http://www.google.com';
   }
 
   search(string) {

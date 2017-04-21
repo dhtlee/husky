@@ -1,7 +1,13 @@
-import { driver } from '../src/driver';
+import { getDriver } from '../src/driver';
 import GooglePage from '../src/pages/google';
 
-describe('selenium test with mocha (es6)', () => {
+describe('Google search test', () => {
+
+  let driver;
+
+  before(() => {
+    driver = getDriver();
+  });
 
   after(() => {
     return driver.quit();
@@ -15,10 +21,9 @@ describe('selenium test with mocha (es6)', () => {
 
   it('should perform google search', () => {
     let googlePage = new GooglePage(driver);
-    return googlePage.open()
-    .then(() => {
-      googlePage.search('illuminati')
-      return driver.sleep(5000); // sleeping to allow visual confirmation of search on page
+    return googlePage.open().then(() => {
+      return googlePage.search('illuminati')
     });
-  })
+    driver.sleep(1000);
+  });
 });
