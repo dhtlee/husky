@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint . --fix",
-    "test": "eslint . --fix && mocha --timeout 10000 --compilers js:babel-core/register"
+    "test": "eslint . --fix && mocha --reporter mochawesome --timeout 10000 --compilers js:babel-core/register"
   },
   "eslintConfig": {
     "parserOptions": {
@@ -22,7 +22,9 @@
     "chai": "3.5.0",
     "chromedriver": "2.29.0",
     "eslint": "3.19.0",
+    "fs": "0.0.1-security",
     "mocha": "3.2.0",
+    "mochawesome": "^2.0.5",
     "selenium-webdriver": "3.3.0"
   }
 }
