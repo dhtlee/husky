@@ -18,4 +18,4 @@ afterEach(function() {
       .then(() => driver.quit());
   }
   return driver.quit();
-})
+});

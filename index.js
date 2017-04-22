@@ -1,3 +1,1 @@
-export const rootDir = __dirname
-
-console.log(rootDir);
+export const rootDir = __dirname;

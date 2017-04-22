@@ -1,7 +1,6 @@
 import { driver } from './mocha-base';
 import GithubPage from '../src/pages/github';
 import { assert, expect } from 'chai';
-import addContext from 'mochawesome/addContext';
 
 describe('Github repo search test', function() {
 
@@ -13,7 +12,7 @@ describe('Github repo search test', function() {
       .then((results) => expect(results.length).to.equal(1)));
   });
 
-  it.only('should fail', function() {
+  it('should fail and generate screenshot', function() {
     let githubPage = new GithubPage(driver);
     return githubPage.open()
       .then(() => assert.fail());
