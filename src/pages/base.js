@@ -33,7 +33,7 @@ class BasePage {
             throw new TestError(entry.message);
           }
         });
-     });
+      });
   }
 }
 

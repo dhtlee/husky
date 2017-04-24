@@ -6,5 +6,5 @@ describe('Browser logs', function() {
     let rbcPage = new RbcPage(driver);
     return rbcPage.open()
       .then(() => new RbcPage(driver)); // instantiate again to check for errors
-  })
+  });
 });

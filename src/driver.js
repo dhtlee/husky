@@ -9,8 +9,7 @@ export function getDriver() {
 export function saveScreenshot(webdriver, filename) {
   return webdriver.takeScreenshot().then((data) => {
     fs.writeFile(filename, data, 'base64', (err) => {
-      if(err) ; // continue without taking screenshot
+      if (err) ; // continue without taking screenshot
     });
   });
-  return filename;
 }

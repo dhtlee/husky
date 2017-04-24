@@ -3,7 +3,6 @@ import { assert, expect } from 'chai';
 import GithubPage from '../src/pages/github';
 
 describe('Github repo search test', function() {
-
   it('should be able to search and find Husky Github repo', function() {
     let githubPage = new GithubPage(driver);
     return githubPage.open()

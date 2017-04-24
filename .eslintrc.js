@@ -1,6 +1,18 @@
 module.exports = {
-  "parser" : "babel-eslint",
+  'parser' : 'babel-eslint',
+  'extends': [
+    'standard',
+  ],
+  'plugins': [
+    'standard'
+  ],
+  'env': {
+    'mocha': true
+  },
   "rules" : {
-    "no-multiple-empty-lines" : [2, { "max": 1 }]
+    'semi': [2, 'always'],
+    'object-curly-spacing': [2, 'always'],
+    'array-bracket-spacing': [2, 'always'],
+    'space-before-function-paren': [2, 'never']
   }
 }
