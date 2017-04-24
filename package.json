@@ -8,12 +8,6 @@
     "mocha": "mocha",
     "test": "npm run lint && npm run mocha"
   },
-  "eslintConfig": {
-    "parserOptions": {
-      "sourceType": "module",
-      "ecmaVersion": 6
-    }
-  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
