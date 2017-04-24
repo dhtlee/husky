@@ -1,6 +1,6 @@
 import { driver } from './mocha-base';
-import GithubPage from '../src/pages/github';
 import { assert, expect } from 'chai';
+import GithubPage from '../src/pages/github';
 
 describe('Github repo search test', function() {
 

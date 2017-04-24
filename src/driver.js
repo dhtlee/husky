@@ -1,8 +1,9 @@
 import webdriver from 'selenium-webdriver';
 import fs from 'fs';
+import config from './config';
 
 export function getDriver() {
-  return new webdriver.Builder().forBrowser('chrome').build();
+  return new webdriver.Builder().forBrowser(config.browser).build();
 }
 
 export function saveScreenshot(webdriver, filename) {
