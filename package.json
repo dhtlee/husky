@@ -24,6 +24,7 @@
     "chromedriver": "2.29.0",
     "eslint": "3.19.0",
     "fs": "0.0.1-security",
+    "geckodriver": "1.4.0",
     "mocha": "3.2.0",
     "mochawesome": "2.0.5",
     "selenium-webdriver": "3.3.0"

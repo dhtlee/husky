@@ -1,5 +1,6 @@
 import { logging } from 'selenium-webdriver';
 import TestError from '../errors/test';
+import config from '../config';
 
 function ignorableLogLevel(logEntry) {
   return logEntry.level.name === '[WARNING]' || logEntry.level.name === '[INFO]';
@@ -14,12 +15,14 @@ class BasePage {
   constructor(webdriver, url) {
     this.driver = webdriver;
     this.url = url;
-    this.checkJavascriptErrors();
+    // no log implementation on geckodriver - https://github.com/mozilla/geckodriver/issues/330
+    if (config.browser !== 'firefox') {
+      this.checkJavascriptErrors();
+    }
   }
 
   open() {
     return this.driver.get(this.url);
-      // .then(() => this.checkJavascriptErrors());
   }
 
   checkJavascriptErrors() {
